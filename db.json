@@ -1,0 +1,16 @@
+{
+  "users" : {
+    "user1": {
+      "email" : "heidegger@gmail.com",
+      "password": "letmepass"
+    },
+    "user2": {
+      "email" : "aristotle@gmail.com",
+      "password": "letmepass"
+    },
+    "user3": {
+      "email" : "plato@gmail.com",
+      "password": "letmepass"
+    }
+  }
+}

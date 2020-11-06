@@ -1,0 +1,198 @@
+@import 'utils/libs';
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/grid';
+@import 'utils/reset';
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section,
+.section {
+  position: relative;
+  padding: 40px 0;
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.divider {
+  display: block; 
+  height: 1px;
+  border: 0; 
+  margin: .2em 0 0;
+}
+
+.divider--warning {
+  border-top: 5px solid $warning-color; 
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field__label {
+  font-size: 1.2em;
+  letter-spacing: .03em;
+}
+
+.field__input {
+  width: inherit;
+  padding: .8em .5em .7em;
+  border: 2px solid rgb(103, 103, 192);
+  border-radius: .2em;
+  box-shadow: 2px 3px 0 1px $neutral-placeholder;
+  transition: .2s ease;
+}
+
+.field__input--empty {
+  box-shadow: 2px 3px 0 1px $neutral-placeholder;
+}
+
+.field__input--valid {
+  box-shadow: 2px 3px 0 1px #30b537;
+}
+
+.field__input--invalid {
+  box-shadow: 2px 3px 0 1px crimson;
+}
+
+.field__input--invalid:focus { 
+  box-shadow: 0px 0px 0 1px crimson;
+  border-color: crimson;
+}
+
+.field__input--empty:focus { 
+  box-shadow: 0px 0px 0 1px $neutral-placeholder;
+  border-color: $neutral-placeholder;
+}
+
+.field__input--valid:focus { 
+  box-shadow: 0px 0px 0 1px #30b537;
+  border-color: #30b537;
+}
+
+
+.field__input::placeholder {
+  letter-spacing: .03em;  
+}
+
+.field__input {
+  letter-spacing: .07em;
+}
+
+.link {
+  text-decoration: underline;
+  letter-spacing: .04em;;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link--primary {
+  color: $primary-color
+}
+
+p {
+  letter-spacing: .015em;
+}
+
+// Modules:
+// example: @import "modules/my-module.scss";
